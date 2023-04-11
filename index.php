@@ -23,6 +23,9 @@
             <a class="index__link" href="lab1.php">Лабораторная 1</a>
             <a class="index__link" href="lab2-1.php">Лабораторная 2</a>
             <a class="index__link" href="presintation/index.html">Презентация</a>
+            <a class="index__link" href="lab4.php">Лабораторная 4</a>
+            <a class="index__link" href="lab5.php">Лабораторная 5</a>
+            <a class="index__link" href="lab6/index.php">Лабораторная 4</a>
         </div>
     </main>
 
