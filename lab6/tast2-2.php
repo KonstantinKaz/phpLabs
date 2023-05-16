@@ -1,7 +1,7 @@
 <?php
-session_start(); // Запускаем сессию
+session_start();
 
-$text = isset($_SESSION['text']) ? $_SESSION['text'] : 'Значение не найдено'; // Получаем значение из сессии или устанавливаем значение по умолчанию
+$text = isset($_SESSION['text']) ? $_SESSION['text'] : 'Значение не найдено'; 
 
 ?>
 

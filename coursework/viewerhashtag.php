@@ -1,9 +1,7 @@
 <?php
 include 'connect.php';
 
-// Check if a field was selected
 if (isset($_POST['field'])) {
-    // Get the field id from the database
     $field = $_POST['field'];
     $field_query = "SELECT id FROM field WHERE name = '$field'";
     $field_result = $conn->query($field_query);
@@ -12,7 +10,6 @@ if (isset($_POST['field'])) {
         $field_row = $field_result->fetch_assoc();
         $field_id = $field_row['id'];
 
-        // Get the hashtags for the selected field
         $hashtag_query = "SELECT hashtag.name FROM hashtag JOIN tagtofield ON hashtag.id = tagtofield.id_tag WHERE tagtofield.id_field = '$field_id'";
         $hashtag_result = $conn->query($hashtag_query);
 
@@ -31,7 +28,6 @@ if (isset($_POST['field'])) {
     }
 }
 
-// Get the hashtags without a field
 $hashtag_query = "SELECT name FROM hashtag WHERE id NOT IN (SELECT id_tag FROM tagtofield)";
 $hashtag_result = $conn->query($hashtag_query);
 
@@ -53,7 +49,6 @@ if ($hashtag_result->num_rows > 0) {
     <label for="field">Область знаний:</label>
     <select name="field" id="field">
         <?php
-        // Get the fields from the database
         $field_query = "SELECT name FROM field";
         $field_result = $conn->query($field_query);
 
@@ -66,6 +61,5 @@ if ($hashtag_result->num_rows > 0) {
 </form>
 
 <?php
-// Close the database connection
 $conn->close();
 ?>

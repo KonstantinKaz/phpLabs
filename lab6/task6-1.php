@@ -1,9 +1,9 @@
 <?php
-session_start(); // Запускаем сессию
+session_start();
 
 if (isset($_POST['email'])) {
 	$_SESSION['email'] = $_POST['email'];
-	header('Location: task6-2.php'); // Переходим на другую страницу
+	header('Location: task6-2.php'); 
 	exit();
 }
 ?>

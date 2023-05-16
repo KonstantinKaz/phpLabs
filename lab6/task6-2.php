@@ -1,11 +1,10 @@
 <?php
-session_start(); // Запускаем сессию
+session_start();
 
-$email = isset($_SESSION['email']) ? $_SESSION['email'] : ''; // Получаем email из сессии, если он есть
+$email = isset($_SESSION['email']) ? $_SESSION['email'] : ''; 
 
-// Обрабатываем отправку формы
 if (isset($_POST['submit'])) {
-	// Обработка формы
+
 }
 
 ?>

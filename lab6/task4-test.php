@@ -1,5 +1,5 @@
 <?php
-session_start(); // Запускаем сессию
+session_start();
 
 if (!isset($_SESSION['country'])) {
 	header('Location: index.php');

@@ -1,5 +1,5 @@
 <?php
-session_start(); // Запускаем сессию
+session_start();
 
 if (isset($_POST['country'])) {
 	$_SESSION['country'] = $_POST['country'];

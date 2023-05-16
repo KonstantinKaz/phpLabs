@@ -11,7 +11,6 @@ if (isset($_POST['saveflag'])) {
     }
 }
 if (isset($_POST['hashtag'])) {
-    // Get the hashtag id from the database
     $hashtag = $_POST['hashtag'];
     $hashtag_query = "SELECT name FROM hashtag WHERE name = '$hashtag'";
     $hashtag_result = $conn->query($hashtag_query);
@@ -20,7 +19,6 @@ if (isset($_POST['hashtag'])) {
         $hashtag_row = $hashtag_result->fetch_assoc();
         $hashtag_name = $hashtag_row['name'];
 
-        // Get the messages for the selected hashtag
         $message_query = "SELECT sms.message, channel.name , users.login, sms.id FROM sms JOIN hashtag ON sms.id=hashtag.sms_id JOIN users ON sms.user_id=users.id JOIN channel ON channel.id = sms.channel_id WHERE hashtag.name = '$hashtag_name'";
         $message_result = $conn->query($message_query);
 
@@ -42,7 +40,6 @@ if (isset($_POST['hashtag'])) {
     }
 }
 
-// Close the database connection
 $conn->close();
 ?>
 

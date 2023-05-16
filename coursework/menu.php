@@ -1,5 +1,5 @@
 <?php
-// set active menu item based on current page
+
 if ($_GET['menu'] == "signup") {
     $active_item = "Sign Up";
 } elseif ($_GET['menu'] == "signin") {
@@ -19,7 +19,6 @@ if ($_GET['menu'] == "signup") {
 }
 
 
-// function to generate menu items
 function generateMenuItem($text, $url)
 {
     global $active_item;
